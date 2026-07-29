@@ -11,24 +11,31 @@ import java.time.Instant;
 @Getter
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-public class BaseEntity {
+public abstract class BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @CreatedDate
-    @Column(name = "created_at", nullable = false, updatable = false)
+    @Column(name = "created_at", nullable = false,  insertable = false, updatable = false)
     private Instant createdAt;
 
     @LastModifiedDate
-    @Column(name = "updated_at", nullable = false)
+    @Column(name = "updated_at", nullable = false, insertable = false, updatable = false)
     private Instant updatedAt;
 
     @Override
     public boolean equals(Object o){
         if(this == o) return true;
         if(!(o instanceof BaseEntity that)) return false;
+
+
         return id != null && id.equals(that.getId());
+    }
+
+    @Override
+    public final int hashCode() {
+        return getClass().hashCode();
     }
 
 }
