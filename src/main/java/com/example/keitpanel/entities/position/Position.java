@@ -1,8 +1,8 @@
-package com.example.keitpanel.position;
+package com.example.keitpanel.entities.position;
 
-import com.example.keitpanel.branch.Branch;
-import com.example.keitpanel.common.BaseEntity;
-import com.example.keitpanel.department.Department;
+import com.example.keitpanel.entities.branch.Branch;
+import com.example.keitpanel.entities.common.BaseEntity;
+import com.example.keitpanel.entities.department.Department;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

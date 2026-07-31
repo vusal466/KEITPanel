@@ -1,7 +1,7 @@
-package com.example.keitpanel.department;
+package com.example.keitpanel.entities.department;
 
-import com.example.keitpanel.branch.Branch;
-import com.example.keitpanel.common.BaseEntity;
+import com.example.keitpanel.entities.branch.Branch;
+import com.example.keitpanel.entities.common.BaseEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

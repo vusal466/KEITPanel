@@ -1,9 +1,9 @@
-package com.example.keitpanel.employee;
+package com.example.keitpanel.entities.employee;
 
-import com.example.keitpanel.branch.Branch;
-import com.example.keitpanel.common.BaseEntity;
-import com.example.keitpanel.department.Department;
-import com.example.keitpanel.position.Position;
+import com.example.keitpanel.entities.branch.Branch;
+import com.example.keitpanel.entities.common.BaseEntity;
+import com.example.keitpanel.entities.department.Department;
+import com.example.keitpanel.entities.position.Position;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -44,10 +44,10 @@ public class Employee extends BaseEntity {
     @Column(length = 20)
     private String phoneInternal;
 
-    @Column(length = 20)
+    @Column(name = "anydesk_id", length = 20, unique = true)
     private String anydeskId; // Məs: "987654321" (Uzaqdan dəstək üçün)
 
-    @Column(length = 50)
+    @Column(name = "pc_username", length = 50)
     private String pcUsername; // Local Kompüter adı (Məs: "HP-DESK-01\User")
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)

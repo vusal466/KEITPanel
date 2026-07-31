@@ -1,6 +1,6 @@
-package com.example.keitpanel.branch;
+package com.example.keitpanel.entities.branch;
 
-import com.example.keitpanel.common.BaseEntity;
+import com.example.keitpanel.entities.common.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;

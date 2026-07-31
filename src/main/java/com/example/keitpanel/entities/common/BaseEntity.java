@@ -1,4 +1,4 @@
-package com.example.keitpanel.common;
+package com.example.keitpanel.entities.common;
 
 import jakarta.persistence.*;
 import lombok.Getter;
