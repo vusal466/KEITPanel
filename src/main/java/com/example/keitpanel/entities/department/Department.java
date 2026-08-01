@@ -28,7 +28,4 @@ public class Department extends BaseEntity {
     @JoinColumn(name = "branch_id", nullable = false)
     private Branch branch;
 
-    @OneToMany(mappedBy = "branch", cascade = CascadeType.ALL)
-    private List<Department> departments = new ArrayList<>();
-
 }

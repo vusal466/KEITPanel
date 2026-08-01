@@ -1,12 +1,12 @@
 services:
   db:
     image: postgres:16-alpine
-    container_name: inventory-db
+    container_name: keitpanel-db
     restart: unless-stopped
     environment:
       POSTGRES_DB: inventory
-      POSTGRES_USER: inventory_user
-      POSTGRES_PASSWORD:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: toor2001
     ports:
       - "5432:5432"
     volumes:
@@ -19,12 +19,12 @@ services:
 
   pgadmin:
     image: dpage/pgadmin4:latest
-    container_name: inventory-pgadmin
+    container_name: keitpanel-pgadmin
     restart: unless-stopped
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@local.dev
       PGADMIN_DEFAULT_PASSWORD: admin
-      PGADMIN_DEFAULT_SERVER_MODE: "False"
+      PGADMIN_CONFIG_SERVER_MODE: "False"
     ports:
       - "5050:80"
     depends_on:
@@ -33,4 +33,3 @@ services:
 
 volumes:
   pgdata:
-
