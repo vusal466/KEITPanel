@@ -1,6 +1,9 @@
 package com.example.keitpanel.services;
 
 import com.example.keitpanel.common.exception.BranchNotFoundException;
+import com.example.keitpanel.dto.request.BranchCreateRequest;
+import com.example.keitpanel.dto.response.BranchResponse;
+import com.example.keitpanel.dto.response.BranchUpdateRequest;
 import com.example.keitpanel.entities.branch.Branch;
 import com.example.keitpanel.repositories.BranchRepository;
 import org.springframework.transaction.annotation.Transactional;
@@ -9,42 +12,16 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-@RequiredArgsConstructor
-@Transactional(readOnly = true)
-public class BranchService {
 
-    private final BranchRepository branchRepository;
+public interface BranchService {
+    List<BranchResponse> findAll();
 
-    public List<Branch> findAll(){
-        return branchRepository.findAll();
-    }
+    BranchResponse findById(Long id);
 
-    public Branch findById(Long id){
-        return branchRepository.findById(id).orElseThrow(()->new BranchNotFoundException(id));
-    }
+    BranchResponse create(BranchCreateRequest request);
 
-    @Transactional
-    public Branch create(Branch branch){
-        return branchRepository.save(branch);
-    }
+    BranchResponse update(Long id, BranchUpdateRequest request);
 
-    @Transactional
-    public Branch update(Long id, Branch updated) {
-        Branch existing = findById(id);
-        existing.setName(updated.getName());
-        existing.setCode(updated.getCode());
-        existing.setAddress(updated.getAddress());
-        existing.setCity(updated.getCity());
-        existing.setPhone(updated.getPhone());
-        existing.setActive(updated.isActive());
-        return existing;
-    }
-
-    @Transactional
-    public void delete(Long id) {
-        Branch branch = findById(id);
-        branch.setActive(false);
-    }
+    void delete(Long id);
 
 }

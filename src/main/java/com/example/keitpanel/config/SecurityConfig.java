@@ -1,4 +1,4 @@
-package com.example.keitpanel.entities.config;
+package com.example.keitpanel.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
