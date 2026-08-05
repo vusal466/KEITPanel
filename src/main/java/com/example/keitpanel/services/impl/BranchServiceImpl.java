@@ -1,8 +1,8 @@
 package com.example.keitpanel.services.impl;
 
 import com.example.keitpanel.dto.request.BranchCreateRequest;
+import com.example.keitpanel.dto.request.BranchUpdateRequest;
 import com.example.keitpanel.dto.response.BranchResponse;
-import com.example.keitpanel.dto.response.BranchUpdateRequest;
 import com.example.keitpanel.entities.branch.Branch;
 import com.example.keitpanel.mapper.BranchMapper;
 import com.example.keitpanel.repositories.BranchRepository;

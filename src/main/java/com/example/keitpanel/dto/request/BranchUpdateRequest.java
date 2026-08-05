@@ -1,4 +1,4 @@
-package com.example.keitpanel.dto.response;
+package com.example.keitpanel.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

@@ -31,4 +31,10 @@ public class GlobalExceptionHandler {
                 "message", message
         );
     }
+
+    @ExceptionHandler(DepartmentNotFoundException.class)
+    public ResponseEntity<Map<String, Object>> handleDepartmentNotFound(DepartmentNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                .body(errorBody(ex.getMessage(), HttpStatus.NOT_FOUND));
+    }
 }

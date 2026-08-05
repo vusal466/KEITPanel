@@ -1,10 +1,8 @@
 package com.example.keitpanel.controller;
 
 import com.example.keitpanel.dto.request.BranchCreateRequest;
+import com.example.keitpanel.dto.request.BranchUpdateRequest;
 import com.example.keitpanel.dto.response.BranchResponse;
-import com.example.keitpanel.dto.response.BranchUpdateRequest;
-import com.example.keitpanel.entities.branch.Branch;
-import com.example.keitpanel.services.BranchService;
 import com.example.keitpanel.services.impl.BranchServiceImpl;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
@@ -39,7 +37,7 @@ public class BranchController {
 
     @PutMapping("/{id}")
     public BranchResponse update(@PathVariable Long id, @Valid @RequestBody BranchUpdateRequest branch){
-        return branchService.update(id,branch);
+        return branchService.update(id, branch);
     }
 
     @DeleteMapping("/{id}")

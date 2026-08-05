@@ -1,8 +1,8 @@
 package com.example.keitpanel.mapper;
 
 import com.example.keitpanel.dto.request.BranchCreateRequest;
+import com.example.keitpanel.dto.request.BranchUpdateRequest;
 import com.example.keitpanel.dto.response.BranchResponse;
-import com.example.keitpanel.dto.response.BranchUpdateRequest;
 import com.example.keitpanel.entities.branch.Branch;
 import org.mapstruct.*;
 
