@@ -20,7 +20,4 @@ public interface DepartmentService {
 
     void delete(Long id);
 
-    Department getEntity(Long id);
-
-    Branch findBranch(Long branchId);
 }

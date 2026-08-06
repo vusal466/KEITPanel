@@ -59,13 +59,13 @@ public class DepartmentServiceImpl implements DepartmentService {
         department.setActive(false);
     }
 
-    @Override
-    public Department getEntity(Long id) {
+
+    private Department getEntity(Long id) {
         return departmentRepository.findById(id).orElseThrow(()-> new DepartmentNotFoundException(id));
     }
 
-    @Override
-    public Branch findBranch(Long branchId) {
+
+    private Branch findBranch(Long branchId) {
         return branchRepository.findById(branchId).orElseThrow(()->new BranchNotFoundException(branchId));
     }
 }
