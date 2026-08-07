@@ -1,6 +1,7 @@
 package com.example.keitpanel.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,6 +19,6 @@ public class DepartmentUpdateRequest {
 
     private boolean active;
 
-    @NotBlank(message = "Filial seçilməlidir")
+    @NotNull(message = "Filial seçilməlidir")
     private Long branchId;
 }

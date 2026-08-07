@@ -37,7 +37,7 @@ public class PositionController {
     }
 
     @PutMapping
-    public PositionResponse update(@PathVariable Long id, @Valid @RequestParam PositionUpdateRequest request){
+    public PositionResponse update(@PathVariable Long id, @Valid @RequestBody PositionUpdateRequest request){
        return positionService.update(id,request);
     }
 
