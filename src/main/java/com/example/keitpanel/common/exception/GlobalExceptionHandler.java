@@ -49,4 +49,10 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
                 .body(errorBody(ex.getMessage(), HttpStatus.NOT_FOUND));
     }
+
+    @ExceptionHandler(EquipmentNotFoundException.class)
+    public ResponseEntity<Map<String, Object>> handleEquipmentNotFound(EquipmentNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                .body(errorBody(ex.getMessage(), HttpStatus.NOT_FOUND));
+    }
 }
