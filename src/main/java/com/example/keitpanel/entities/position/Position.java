@@ -20,7 +20,7 @@ public class Position extends BaseEntity {
     private String code;
 
     @Column(nullable = false)
-    private short headcount = 1;
+    private Short headcount = 1;
 
     @Column(nullable = false)
     private boolean active = true;

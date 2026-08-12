@@ -21,6 +21,8 @@ public class EmployeeCreateRequest {
     @Size(max = 80)
     private String lastName;
 
+    @Size(max = 80)
+    private String email;
 
     @Size(max = 80)
     private String patronymic;

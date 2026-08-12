@@ -38,6 +38,8 @@ public class Employee extends BaseEntity {
     private LocalDate hiredAt;
     private LocalDate terminatedAt;
 
+    private String email;
+
     @Column(length = 30)
     private String phoneMobile;
 

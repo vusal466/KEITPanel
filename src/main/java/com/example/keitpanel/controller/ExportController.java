@@ -18,6 +18,12 @@ public class ExportController {
 
     private final ExportServiceImpl exportService;
 
+    @GetMapping("/employees")
+    public ResponseEntity<byte[]> exportEmployees() {
+        byte[] excelContent = exportService.exportEmployees();
+        return createExcelResponse(excelContent, "employees.xlsx");
+    }
+
     @GetMapping("/equipments")
     public ResponseEntity<byte[]> exportEquipments() {
         byte[] excelContent = exportService.exportEquipments();

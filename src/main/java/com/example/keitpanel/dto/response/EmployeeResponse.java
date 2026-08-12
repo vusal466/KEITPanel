@@ -1,6 +1,7 @@
 package com.example.keitpanel.dto.response;
 
 import com.example.keitpanel.entities.employee.EmployeeStatus;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,6 +24,8 @@ public class EmployeeResponse {
     private EmployeeStatus status;
 
     private String phoneMobile;
+
+    private String email;
 
     private String phoneInternal;
 

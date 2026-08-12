@@ -25,6 +25,9 @@ public class EmployeeUpdateRequest {
     private EmployeeStatus status;
 
     @Size(max = 80)
+    private String email;
+
+    @Size(max = 80)
     private String patronymic;
 
     @Size(max = 30)
